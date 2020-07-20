@@ -1,4 +1,4 @@
-testingArray = [3, 2, 1, 4]
+testingArray = [3, 2, 1, 4, 9, 7, 6, 5]
 print('TestingArray')
 print(testingArray)
 print('#############')
@@ -60,7 +60,7 @@ def bubble_sort(arr):
     return arr
 
 
-print(bubble_sort(testingArray))
+# print(bubble_sort(testingArray))
 '''
 STRETCH: implement the Counting Sort function below
 
@@ -82,5 +82,15 @@ What is the time and space complexity of the counting sort algorithm?
 
 def counting_sort(arr, maximum=None):
     # Your code here
-
+    while maximum is not 0:
+        print(f'max: {maximum}')
+        for i in range(len(arr)):
+            print(arr)
+            if arr[i] == maximum:
+                arr.pop(i)
+                arr.insert(0, maximum)
+        maximum -= 1
     return arr
+
+
+print(counting_sort(testingArray, 9))
