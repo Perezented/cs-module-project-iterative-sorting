@@ -29,10 +29,38 @@ def selection_sort(arr):
 
 def bubble_sort(arr):
     # Your code here
+    # bubble sort compares the values and switches values depending on how they stack up on a comparision test.
+    # for i in range(len(arr)):
+    #     index = i
+    #     while i != len(arr) - 1:
+    #         leftValue = arr[index]
+    #         rightvalue = arr[index+1]
+    #         if leftValue > rightvalue:
+    #             arr[index], arr[index + 1] = arr[index + 1], arr[index]
+    #         else:
+    #             break
+    checkingSort = False
+    # for i in range(len(arr) - 1):
+    #     index = i
+    # print(f'arr item: {arr[i]}')
+    # print(arr[len(arr) - 1])
+    # if arr[len(arr) - 1] == arr[i]:
+    #     print('This is the last line')
+    # print(f'arr[i:][0]{arr[i:][0]}')
 
+    while not checkingSort:
+        checkingSort = True
+        for i in range(len(arr) - 1):
+            # want to start with the left item and compare with the item right to it.
+            if arr[i] > arr[i+1]:
+                # if the left item is greater than the right, then swap them
+                checkingSort = False
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+    # if the right is greater, then continue on with the next item
     return arr
 
 
+print(bubble_sort(testingArray))
 '''
 STRETCH: implement the Counting Sort function below
 
