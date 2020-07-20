@@ -6,20 +6,24 @@ print('#############')
 
 def linear_search(arr, target):
     # Your code here
-    found = False
-    while not found:
-        found = True
-        for i in range(len(arr)-1):
-            # print(i)
-            if arr[i] != target:
-                found = False
-            elif arr[i] == target:
-                found = True
-                return i
-        return - 1
+    # found = False
+    # while not found:
+    #     found = True
+    #     for i in range(len(arr)-1):
+    #         # print(i)
+    #         if arr[i] != target:
+    #             found = False
+    #         elif arr[i] == target:
+    #             found = True
+    #             return i
+    # return - 1
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
 
 
-print(linear_search(testingArray, 9))
+print(linear_search(testingArray, 5))
 # Write an iterative implementation of Binary Search
 
 
