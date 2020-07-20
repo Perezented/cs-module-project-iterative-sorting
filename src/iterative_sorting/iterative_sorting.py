@@ -1,9 +1,14 @@
-testingArray = [3, 2, 1, 4, 9, 7, 6, 5]
-print('TestingArray')
-print(testingArray)
-print('#############')
+import time
+testingArray = [68, 64, 58, 73, 66, 70, 56, 71, 1, 82, 12, 74, 4, 89, 18, 81, 19, 87, 49, 75, 25, 39, 28, 41, 8, 92, 62, 9, 67, 33, 40, 16, 79, 35, 46, 36, 26, 65, 100, 15, 55, 63, 29, 24, 60, 85, 27, 57,
+                98, 88, 7, 6, 32, 38, 10, 59, 77, 11, 21, 83, 34, 76, 51, 96, 23, 17, 45, 13, 5, 97, 42, 69, 93, 72, 22, 54, 30, 43, 94, 2, 78, 61, 31, 52, 44, 48, 3, 99, 95, 47, 37, 50, 91, 14, 84, 90, 53, 80, 86, 20]
+# print('TestingArray')
+# print(testingArray)
+# print('#############')
 
 # TO-DO: Complete the selection_sort() function below
+
+#########################################
+sele_start_time = time.time()
 
 
 def selection_sort(arr):
@@ -24,7 +29,18 @@ def selection_sort(arr):
     return arr
 
 
+print(selection_sort(testingArray))
+
+sele_end_time = time.time()
+print(f"runtime for selection_sort: {sele_end_time - sele_start_time} seconds")
+print('#############')
+
+############################################
+
 # TO-DO:  implement the Bubble Sort function below
+
+#########################################
+bble_start_time = time.time()
 
 
 def bubble_sort(arr):
@@ -60,7 +76,14 @@ def bubble_sort(arr):
     return arr
 
 
-# print(bubble_sort(testingArray))
+print(bubble_sort(testingArray))
+
+bble_end_time = time.time()
+print(f"runtime for bubbleSort: {bble_end_time - bble_start_time} seconds")
+print('#############')
+
+############################################
+
 '''
 STRETCH: implement the Counting Sort function below
 
@@ -78,14 +101,16 @@ buckets.
 
 What is the time and space complexity of the counting sort algorithm?
 '''
+#########################################
+cnt_start_time = time.time()
 
 
 def counting_sort(arr, maximum=None):
     # Your code here
-    while maximum is not 0:
-        print(f'max: {maximum}')
+    while maximum != 0:
+        # print(f'max: {maximum}')
         for i in range(len(arr)):
-            print(arr)
+            # print(arr)
             if arr[i] == maximum:
                 arr.pop(i)
                 arr.insert(0, maximum)
@@ -93,4 +118,8 @@ def counting_sort(arr, maximum=None):
     return arr
 
 
-print(counting_sort(testingArray, 9))
+print(counting_sort(testingArray, 100))
+cnt_end_time = time.time()
+print(f"runtime for countingSort: {cnt_end_time - cnt_start_time} seconds")
+print('#############')
+############################################
