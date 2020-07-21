@@ -1,9 +1,11 @@
 import time
-testingArray = [68, 64, 58, 73, 66, 70, 56, 71, 1, 82, 12, 74, 4, 89, 18, 81, 19, 87, 49, 75, 25, 39, 28, 41, 8, 92, 62, 9, 67, 33, 40, 16, 79, 35, 46, 36, 26, 65, 100, 15, 55, 63, 29, 24, 60, 85, 27, 57,
-                98, 88, 7, 6, 32, 38, 10, 59, 77, 11, 21, 83, 34, 76, 51, 96, 23, 17, 45, 13, 5, 97, 42, 69, 93, 72, 22, 54, 30, 43, 94, 2, 78, 61, 31, 52, 44, 48, 3, 99, 95, 47, 37, 50, 91, 14, 84, 90, 53, 80, 86, 20]
-# print('TestingArray')
-# print(testingArray)
-# print('#############')
+import random
+testingArray = []
+for x in range(1000):
+    testingArray.append(random.randint(1, 1001))
+print('TestingArray')
+print(testingArray)
+print('#############')
 
 # TO-DO: Complete the selection_sort() function below
 
@@ -79,7 +81,7 @@ def bubble_sort(arr):
 print(bubble_sort(testingArray))
 
 bble_end_time = time.time()
-print(f"runtime for bubbleSort: {bble_end_time - bble_start_time} seconds")
+print(f"runtime for bubble_sort: {bble_end_time - bble_start_time} seconds")
 print('#############')
 
 ############################################
@@ -118,8 +120,8 @@ def counting_sort(arr, maximum=None):
     return arr
 
 
-print(counting_sort(testingArray, 100))
+print(counting_sort(testingArray, 1000))
 cnt_end_time = time.time()
-print(f"runtime for countingSort: {cnt_end_time - cnt_start_time} seconds")
+print(f"runtime for counting_sort: {cnt_end_time - cnt_start_time} seconds")
 print('#############')
 ############################################
